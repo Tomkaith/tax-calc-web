@@ -1,0 +1,122 @@
+body {
+  font-family: sans-serif;
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin: 0;
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: #ddd;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.tabs button:hover {
+  background: #bbb;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #45a049;
+}
+
+p {
+  font-weight: bold;
+  white-space: pre-wrap;
+}
+
+@media (max-width: 400px) {
+  .tabs button {
+    font-size: 14px;
+  }
+}
+/* แถบเมนูด้านบน */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #4CAF50;
+  color: white;
+  padding: 10px 10px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar .brand {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.navbar button {
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* DARK MODE */
+body.dark {
+  background: #121212;
+  color: #eee;
+}
+
+body.dark .container {
+  background: #1e1e1e;
+  color: #eee;
+}
+
+body.dark input,
+body.dark select {
+  background: #2c2c2c;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+body.dark button {
+  background: #2196F3;
+}
+
+body.dark .navbar {
+  background: #333;
+}

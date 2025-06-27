@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>เครื่องมือคำนวณอเนกประสงค์</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>📊 เครื่องมือคำนวณอเนกประสงค์</h1>
+    
+    <!-- เมนูแท็บ -->
+    <div class="tabs">
+      <button onclick="switchTab('tax')">คำนวณภาษี</button>
+      <button onclick="switchTab('interest')">คำนวณดอกเบี้ย</button>
+      <button onclick="switchTab('convert')">แปลงหน่วย</button>
+    </div>
+
+    <!-- 🔹 Tab: ภาษี -->
+    <div class="tab" id="tax">
+      <h2>คำนวณภาษี</h2>
+      <label>รายได้ต่อปี (บาท):</label>
+      <input type="number" id="income" />
+      <button onclick="calculateTax()">คำนวณ</button>
+      <p id="taxResult"></p>
+    </div>
+
+    <!-- 🔹 Tab: ดอกเบี้ย -->
+    <div class="tab" id="interest" style="display:none">
+      <h2>คำนวณดอกเบี้ย</h2>
+      <label>เงินต้น (บาท):</label>
+      <input type="number" id="principal" />
+      <label>ดอกเบี้ยต่อปี (%):</label>
+      <input type="number" id="rate" />
+      <label>ระยะเวลา (ปี):</label>
+      <input type="number" id="time" />
+      <button onclick="calculateInterest()">คำนวณ</button>
+      <p id="interestResult"></p>
+    </div>
+
+    <!-- 🔹 Tab: แปลงหน่วย -->
+    <div class="tab" id="convert" style="display:none">
+      <h2>แปลงหน่วยเซนติเมตร ↔ นิ้ว</h2>
+      <label>ค่าที่ต้องการแปลง:</label>
+      <input type="number" id="valueToConvert" />
+      <select id="unit">
+        <option value="cm-to-inch">เซนติเมตร ➜ นิ้ว</option>
+        <option value="inch-to-cm">นิ้ว ➜ เซนติเมตร</option>
+      </select>
+      <button onclick="convertUnit()">แปลง</button>
+      <p id="convertResult"></p>
+    </div>
+  </div>
+  <div class="navbar">
+  <div class="brand">เปลี่ยนธีม</div>
+  <button id="toggleTheme">🌙</button>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>
